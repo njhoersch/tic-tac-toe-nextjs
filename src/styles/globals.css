@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: custom;
+    src: url(/GochiHand-Regular.ttf);
+}
+
+body {
+    font-family: custom;
+    width: 100vw;
+    height: 100vh;
+}
+
+.btn {
+    @apply bg-white text-black px-4 py-2 rounded text-xl hover:scale-105 duration-150 ease-in-out hover:bg-green-500 hover:text-white;
+}
+
+.board-background {
+    background-image: url(/ttt-board.png);
+    background-size: 700px 600px;
+    background-position: 50px;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+.board {
+    @apply border-white border-4 rounded-3xl px-24 py-5 flex flex-wrap max-w-[800px] items-center justify-evenly;
+}
+
+.board-spot {
+    @apply hover:bg-white/10 hover:cursor-pointer h-40 w-40 flex justify-center items-center text-[200px];
+}
+
+.player-box {
+    @apply border-4 rounded-3xl w-[250px] h-[100px] text-3xl flex px-5 items-center justify-between;
+}
